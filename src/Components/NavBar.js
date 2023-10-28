@@ -19,7 +19,7 @@ export const NavBar = () => {
     })
 
     return(
-        <Navbar expand="lg">
+        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
             <Navbar.Brand href="#home">
                 <img src="" alt="" />
@@ -31,9 +31,9 @@ export const NavBar = () => {
 
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#skills">Skills</Nav.Link>
-                <Nav.Link href="#project">Project</Nav.Link>
+                <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}>Home</Nav.Link>
+                <Nav.Link href="#skills"  className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}>Skills</Nav.Link>
+                <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'}>Project</Nav.Link>
             </Nav>
             <span className="navbar-text">
                 <div className="social-icon">

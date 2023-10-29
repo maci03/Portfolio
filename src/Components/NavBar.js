@@ -18,6 +18,9 @@ export const NavBar = () => {
         window.addEventListener('scroll', onScroll);
     })
 
+    
+
+
     return(
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
@@ -31,9 +34,9 @@ export const NavBar = () => {
 
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}>Home</Nav.Link>
-                <Nav.Link href="#skills"  className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}>Skills</Nav.Link>
-                <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'}>Project</Nav.Link>
+                <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                <Nav.Link href="#skills"  className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Skills')}>Skills</Nav.Link>
+                <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Project')}>Project</Nav.Link>
             </Nav>
             <span className="navbar-text">
                 <div className="social-icon">

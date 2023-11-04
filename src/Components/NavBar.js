@@ -8,8 +8,6 @@ import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-import { Link } from 'react-router-dom';
-
 
 export const NavBar = () => {
 

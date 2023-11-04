@@ -17,3 +17,11 @@ export const Contact = () => {
     const [buttonText, setButtonText] = useState('Send');
     const [status, setStatus] = useState({});
   
+
+    const onFormUpdate = (category, value) => {
+        setFormDetails({
+          ...formDetails,
+          [category]: value
+        })
+    }
+  
